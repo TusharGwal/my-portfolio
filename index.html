@@ -58,6 +58,7 @@
 
     .hero { padding: 72px 0 48px; display: grid; grid-template-columns: 1.4fr .6fr; gap: 24px; align-items: center; }
     .hero h1 { font-size: clamp(2.2rem, 2.6vw + 1rem, 3.4rem); line-height: 1.08; margin: 8px 0 14px; }
+    .profile-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid var(--surface); box-shadow: var(--shadow); margin: 0 auto 24px; display: block; }
     .eyebrow { display: inline-flex; gap: 8px; align-items: center; font-weight: 700; font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
     .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-2); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-2) 25%, transparent); }
     .lead { font-size: 1.08rem; color: var(--muted); max-width: 62ch; }
@@ -88,6 +89,7 @@
     .tag { display: inline-block; font-size: .85rem; background: color-mix(in srgb, var(--brand) 16%, transparent); padding: 4px 8px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--brand) 30%, transparent); margin-right: 6px; margin-top: 6px; }
 
     .project { display: grid; gap: 8px; padding: 16px; border: 1px solid color-mix(in srgb, var(--muted) 18%, transparent); border-radius: 14px; background: color-mix(in srgb, var(--surface) 92%, transparent); }
+    .project img { width: 100%; border-radius: 8px; margin-bottom: 8px; object-fit: cover; aspect-ratio: 16/9; display: block; background: var(--muted-surface); }
     .project h3 { margin: 0; font-size: 1.02rem; }
     .project p { margin: 0; color: var(--muted); }
 
@@ -160,6 +162,7 @@
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
         <a href="#education">Education</a>
       </nav>
       <div class="nav-actions">
@@ -176,13 +179,18 @@
       <div>
         <div class="eyebrow"><span class="dot"></span> <span id="typewriter" class="typing">Software Engineer</span></div>
         <h1>Hi, I'm <span style="background: linear-gradient(90deg, var(--brand), var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent;">Tushar Gwal</span>.</h1>
-        <p class="lead">Recent MSCS graduate with 5 years of combined experience across applied AI/ML research, backend development, and cloud engineering. Currently working as an AI Engineer Intern at Product Manager Accelerator and as an AI Research Fellow at Handshake. </p>
+        <p class="lead">
+          AI Engineer Intern @ PMA &nbsp;★&nbsp; AI Researcher @ Handshake AI<br>
+          MSCS ’25 @ Illinois Tech — AI/ML Research (MRTD & SSIL Labs)<br>
+          Ex-SWE @ Tata Consultancy Services (4 years) — Clients: CVS Health & Humana<br>
+          Actively looking for Full-time Opportunities &nbsp;★&nbsp; Willing to relocate (US) &nbsp;★&nbsp; F1-OPT
+        </p>
         <div class="cta">
           <a class="btn primary" href="assets/resume/Tushar Gwal, AI Engineer Resume.pdf" target="_blank" rel="noopener" aria-label="Download Resume">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             Resume
           </a>
-          <a class="btn" href="mailto:tushargwal@gmail.com" aria-label="Email">
+          <a class="btn" href="mailto:tusharggwal@gmail.com" aria-label="Email">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             Email
           </a>
@@ -198,19 +206,24 @@
         <div class="socials">
           <!-- <span class="chip">📍 Chicago, IL · Open to relocate</span> -->
           <!-- <span class="chip">🛂 F-1 OPT · STEM eligible until Sept 2028 · No immediate sponsorship</span> -->
-          <!-- <a class="chip" href="mailto:tushargwal@gmail.com">✉️ tushargwal@gmail.com</a> -->
+          <!-- <a class="chip" href="mailto:tusharggwal@gmail.com">✉️ tusharggwal@gmail.com</a> -->
           <!-- <a class="chip" href="https://scholar.google.com" target="_blank" rel="noopener">🎓 Google Scholar</a> -->
           <!-- <span class="chip" style="width: 100%;">Domains: AI, Machine Learning, Deep Learning, MLOps, Computer Vision, Healthcare, NLP</span> -->
         </div>
       </div>
-      <div class="card">
-        <div class="kicker">Quick Highlights</div>
-        <ul class="list" style="margin-top: 8px;">
-          <li>🌐 GenAI products: Founding AI engineer for an AI Coach app at <strong>Product Manager Accelerator</strong> using LLMs, LangChain, Pinecone, FastAPI, and a React/Vercel frontend.</li>
-          <li>🧪 LLM & agentic AI evaluation: <strong>Handshake AI</strong> MOVE Fellow designing reasoning-heavy tests and reviewing agentic AI plans and code for integrity.</li>
-          <li>🩺 Applied research: MRI-based neural implant tracking (RSNA 2025 submission), BIDS-compliant XR motion analytics, and CNN-based signature verification (IJSRCSEIT).</li>
-          <li>🧱 Backend & cloud: Upgraded CVS & Humana healthcare systems to <strong>Java 17 + Spring Boot 3</strong>, maintained SSIS/SSRS ETL pipelines, and completed 10+ AWS MLOps workshops.</li>
-        </ul>
+      <div>
+        <div class="card" style="text-align: center; padding: 24px;">
+          <img src="assets/profile.png" alt="Tushar Gwal" class="profile-photo" style="margin-bottom: 16px;">
+          <div class="kicker" style="margin-bottom: 12px;">Quick Highlights</div>
+          <ul class="list" style="text-align: left; margin-top: 8px;">
+            <li>🥈 2nd Place — StarPlan MAS Hackathon (SF): AI Consultation Listener (multi-agent voice app)</li>
+            <li>🥉 3rd Place Overall — PM Accelerator cohort; Awarded for GenAI Coach execution + product viability</li>
+            <!-- <li>🧪 (Current) Founding AI Engineer @ PM Accelerator (Building GenAI Powered Product) & Handshake AI (MOVE Fellow): LLM + Agentic AI Eval</li> -->
+            <!-- <li>🧱 Prior Industry Experience (4 yrs) — TCS: Worked with leading healthcare clients (CVS & Humana); Modernized their legacy apps + designed ETL Data pipelines</li> -->
+            <!-- <li>🩺 Applied AI Research — Illinois Tech (2 Labs): MRI neural implant tracking (RSNA 2025) + BIDS-compliant XR motion analytics</li> -->
+            <li>📄 Publication (2018, IJSRCSEIT): CNN signature verification + IR (93% validation accuracy)</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -218,16 +231,13 @@
       <h2>About me</h2>
       <div class="grid cols">
         <div class="card">
-      <p style="text-align: justify;">
-Currently working as an AI Engineer Intern at Product Manager Accelerator and as an
-        AI Research Fellow at Handshake AI. I completed my MS in Computer Science in May 2025
-        from Illinois Institute of Technology, where I worked as an AI/ML Researcher in two labs (MRTD &amp; SSIL).
-  Before that, I worked as a Software Engineer at Tata Consultancy Services (TCS) for almost
-  4 years. Overall, I bring 5 years of combined experience in
-  AI product development, Deep Learning &amp; Computer Vision research, and
-  cloud engineering. My domain areas are AI, Machine Learning, Deep Learning,
-  MLOps, Computer Vision, Healthcare, and NLP. I am looking for full time roles in these areas. I am on F1 OPT with posiibility of STEM Extension valid until Sept 2028 so i dont need immediate visa sponsorship, can onboard immediately and am willing to relocate anywhere in the United States.
-</p>
+      <ul class="list" style="text-align: justify;">
+        <li>I’m an AI Engineer who blends enterprise engineering discipline with hands-on applied AI work. I completed my MSCS at Illinois Institute of Technology (’25) and bring 5 years of combined experience in backend development, cloud engineering, and AI/ML research.</li>
+        <li>Right now, I’m working in two parallel tracks: as an AI Engineer Intern at Product Manager Accelerator, I develop GenAI-powered product end-to-end. In parallel, as an AI Researcher (MOVE Fellow) at Handshake AI, I conduct LLM and agentic AI evaluations to test model reasoning and reliability, validating outputs against defined guardrails.</li>
+        <li>Before grad school, I spent ~4 years at Tata Consultancy Services (TCS) working with leading healthcare clients like CVS Health and Humana, modernizing enterprise applications, enabling cloud migration, and designing ETL data pipelines.</li>
+        <li>During my MS, I worked in two research labs (MRTD and SSIL) on applied AI projects in medical imaging and spatial computing/XR, including MRI-based neural implant stability analysis and BIDS-compliant XR motion analytics.</li>
+        <li>I’m actively seeking full-time roles in AI/ML, GenAI, Computer Vision, and MLOps. I’m open to relocating anywhere in the U.S., and I’m on F-1 OPT.</li>
+      </ul>
       </div>
     </section>
 
@@ -282,84 +292,65 @@ Currently working as an AI Engineer Intern at Product Manager Accelerator and as
             <span style="white-space: nowrap;">Sep 2025 – Present · Tallahassee, FL</span>
           </div>
           <ul class="list">
-            <li>Served as a founding AI engineer building an AI Coach application, a career coaching tool powered by Generative AI (LLMs, LangChain, Pinecone, FastAPI).</li>
-            <li>Built the backend recommendation engine by fetching user career profiles and integrating O*NET, BLS, and Adzuna APIs to generate personalized career path suggestions.</li>
-            <li>Led full stack integration of LLM APIs (OpenAI GPT-4o) with FastAPI, PostgreSQL, and Pinecone, connecting to a React/Vercel frontend to deliver scalable user experiences.</li>
+            <li>Founding AI engineer building an AI Coach application powered by Generative AI (LLMs, LangChain, Pinecone, FastAPI) to guide users through career planning, skill recommendations, and personalized coaching.</li>
+            <li>Built an entire backend recommendation engine by integrating multiple labor market APIs and optimizing the RAG pipeline with hybrid search and reranking, while fine-tuning matching logic using user questionnaire & chat history to achieve a 50% latency reduction for real-time career suggestions.</li>
+            <li>Led full-stack development, integrating LLM APIs (OpenAI GPT-4o) into the FastAPI backend and connecting PostgreSQL & Pinecone vector DB with a React/Vercel frontend to deliver seamless, scalable user experiences.</li>
           </ul>
           <div>
-            <span class="tag">LangChain</span><span class="tag">FastAPI</span><span class="tag">Pinecone</span><span class="tag">PostgreSQL</span>
+            <span class="tag">Generative AI</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">FastAPI</span><span class="tag">Pinecone</span><span class="tag">React</span><span class="tag">PostgreSQL</span>
           </div>
         </div>
 
         <div class="exp-item">
           <div class="exp-head">
             <div>
-              <h3>AI Researcher (MOVE Fellow)</h3>
+              <h3>AI Researcher - Model Validation Expert (MOVE) Fellow</h3>
               <div style="color: var(--muted); font-size: 0.9rem; font-weight: 500; margin-top: 2px;">Handshake AI</div>
             </div>
             <span style="white-space: nowrap;">Aug 2025 – Present · San Francisco, CA</span>
           </div>
           <ul class="list">
-            <li>Designed reasoning-heavy prompts (ToTs) for text-only tasks, exposing major reasoning failures in LLMs.</li>
-            <li>Created multimodal prompts (MIITs) requiring models to analyze images and text, inducing failures in visual interpretation and logical reasoning.</li>
-            <li>Promoted to an ML-focused project analyzing agentic AI plans and code to ensure scientific integrity and alignment between design and outputs.</li>
+            <li>Created 20+ complex prompts using Tree-of-Thought (ToT) and multimodal (MIIT) techniques to stress-test LLMs, successfully exposing 3 major failures in logical reasoning and visual interpretation.</li>
+            <li>Promoted to an ML-focused project to analyze agentic AI plans and code, validating outputs against strict security guardrails and ensuring generated code matched intended design and scientific reasoning steps.</li>
           </ul>
           <div>
-            <span class="tag">LLM Eval</span><span class="tag">Prompt Design</span><span class="tag">Agentic AI</span>
+            <span class="tag">LLM Eval</span><span class="tag">Agentic AI</span><span class="tag">Prompt Engineering</span><span class="tag">Tree-of-Thought</span><span class="tag">Model Validation</span>
           </div>
         </div>
 
         <div class="exp-item">
           <div class="exp-head">
             <div>
-              <h3>Research Assistant — Deep Learning & XR Analytics</h3>
+              <h3>Research Assistant - Deep Learning & XR Analytics</h3>
               <div style="color: var(--muted); font-size: 0.9rem; font-weight: 500; margin-top: 2px;">Illinois Institute of Technology</div>
             </div>
             <span style="white-space: nowrap;">Aug 2024 – May 2025 · Chicago, IL</span>
           </div>
           <ul class="list">
-            <li>Worked in 2 research labs, Social Spatial Interaction (SSIL) Lab and Magnetic Resonance Technology Discovery (MRTD) Lab, on applied AI projects in extended reality (XR) motion analytics and MRI-based neural implant stability analysis.</li>
-            <li>At SSIL Lab - converted and standardized XR motion datasets into BIDS format, enhancing accessibility for research in spatial computing and analyzed motion-tracking data to study human behavior and interactions in Extended Reality (XR) environments.</li>
-            <li>At MRTD Lab - assessed neural implant displacement in longitudinal brain MRI data by segmenting implants via ITK-SNAP and computing 3D angular shifts using PCA and quaternion analysis, supporting clinical interpretations of post-operative stability.</li>
+            <li>Worked across 2 research labs, Social Spatial Interaction (SSIL) Lab and Magnetic Resonance Technology Discovery (MRTD) Lab, on applied AI projects involving extended reality (XR) motion analytics & MRI-based neural implant stability analysis.</li>
+            <li>At SSIL Lab - Standardized 137 GB of XR motion datasets into BIDS format, reducing data preprocessing time for future researchers by 90% and enhancing accessibility for research in spatial computing to study human behavior and interactions in Extended Reality (XR).</li>
+            <li>At MRTD Lab - Engineered a 3D Computer Vision workflow to assess neural implant stability across longitudinal MRI datasets, performing segmentation of 35 implants via ITK-SNAP and utilizing PCA and quaternion-based spatial analysis to detect sub-millimeter 3D angular shifts, providing high-precision quantitative metrics for clinical validation.</li>
           </ul>
           <div>
-            <span class="tag">Python</span><span class="tag">Medical Imaging</span><span class="tag">XR</span><span class="tag">BIDS</span><span class="tag">ITK-SNAP</span><span class="tag">NumPy</span>
+            <span class="tag">Computer Vision</span><span class="tag">Medical Imaging</span><span class="tag">XR/VR</span><span class="tag">Spatial Computing</span><span class="tag">Python</span><span class="tag">BIDS</span><span class="tag">ITK-SNAP</span>
           </div>
         </div>
 
         <div class="exp-item">
           <div class="exp-head">
             <div>
-              <h3>System Engineer — Java Backend & Cloud</h3>
-              <div style="color: var(--muted); font-size: 0.9rem; font-weight: 500; margin-top: 2px;">Tata Consultancy Services (TCS)</div>
+              <h3>System Engineer</h3>
+              <div style="color: var(--muted); font-size: 0.9rem; font-weight: 500; margin-top: 2px;">Tata Consultancy Services</div>
             </div>
-            <span style="white-space: nowrap;">Jan 2022 – Aug 2023 · New Delhi, India</span>
+            <span style="white-space: nowrap;">Jan 2020 – Sep 2023 · New Delhi, IND</span>
           </div>
           <ul class="list">
-            <li>Modernized critical CVS healthcare applications by upgrading legacy Java MVC apps to Java 17 and Spring Boot 3.</li>
-            <li>Migrated infrastructure to Azure, including GitHub-based source control, database connections, and CI/CD pipelines using Azure DevOps.</li>
-            <li>Collaborated in Agile sprints, contributing unit/integration tests and MySQL optimization to ensure production-grade performance and data integrity.</li>
+            <li>Upgraded legacy Java applications for a leading Healthcare organization CVS Health to Java 17 & Spring Boot 3 and migrated apps to Azure Cloud with GitHub & Azure DevOps CI/CD, improving performance, release reliability, and future-proofing the tech stack.</li>
+            <li>Designed ETL pipelines (SSIS) and automated report generation (SSRS) for Humana to deliver clean, client-ready datasets for monthly stakeholder reporting, reducing manual reporting effort by 70%.</li>
+            <li>Collaborated directly with clients & cross-functional teams in an Agile environment to deliver high-quality releases, resolve critical defects, write unit/integration tests, participate in code reviews, and mentor new hires.</li>
           </ul>
           <div>
-            <span class="tag">Java 17</span><span class="tag">Spring Boot</span><span class="tag">Azure DevOps</span><span class="tag">MySQL</span>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-head">
-            <div>
-              <h3>Assistant System Engineer — Data Analytics & ETL</h3>
-              <div style="color: var(--muted); font-size: 0.9rem; font-weight: 500; margin-top: 2px;">Tata Consultancy Services (TCS)</div>
-            </div>
-            <span style="white-space: nowrap;">Jan 2020 – Jan 2022 · New Delhi, India</span>
-          </div>
-          <ul class="list">
-            <li>Maintained and optimized SSIS-based ETL pipelines and SSRS reporting for Humana, a major healthcare client.</li>
-            <li>Ensured 99.9% uptime and SLA compliance by monitoring production systems with Dynatrace and ServiceNow.</li>
-            <li>Delivered custom reports and mentored new hires on data flows, troubleshooting ETL job failures to maintain continuous data integrity.</li>
-          </ul>
-          <div>
-            <span class="tag">SSIS</span><span class="tag">SSRS</span><span class="tag">Dynatrace</span><span class="tag">ServiceNow</span>
+            <span class="tag">Java 17</span><span class="tag">Spring Boot 3</span><span class="tag">Azure Cloud</span><span class="tag">CI/CD</span><span class="tag">ETL</span>
           </div>
         </div>
       </div>
@@ -375,57 +366,53 @@ Currently working as an AI Engineer Intern at Product Manager Accelerator and as
       </div>
       <div class="grid cols-3">
         <article class="project" data-category="genai">
+          <img src="assets/projects/ai-consultation.gif" alt="AI Consultation Listener Demo" loading="lazy">
+          <h3>AI Consultation Listener (Multi-Agent Voice System)</h3>
+          <p>Engineered a voice-native multi-agent system that reduces the doctor–patient communication gap by orchestrating 5 specialized agents for live transcription, structured clinical extraction, and dual-view summaries (SOAP-style clinician note + plain-language patient instructions). Built the backend in FastAPI with Azure OpenAI (Whisper, GPT-4) and implemented a grounded Q&A agent that answers only from the extracted consultation JSON to minimize medical hallucinations. Awarded 2nd Place at the StarPlan Multi-Agent Systems Hackathon for delivering a scalable prototype that automates documentation while improving patient understanding post-visit.</p>
+          <div>
+            <span class="tag">Multi-Agent Systems</span><span class="tag">FastAPI</span><span class="tag">Azure OpenAI</span><span class="tag">Whisper</span><span class="tag">GPT-4</span>
+          </div>
+          <p><a href="https://github.com/TusharGwal/AI-Consultation-Listener---Multi-Agent-Medical-Voice-System.git" target="_blank" rel="noopener">Code</a></p>
+        </article>
+
+        <article class="project" data-category="genai">
+          <img src="assets/projects/trunorth.gif" alt="TruNorth Demo" loading="lazy">
           <h3>TruNorth – GenAI Powered Career Coach</h3>
           <p>Built an end-to-end AI career coaching web app as founding AI engineer, using FastAPI, Azure OpenAI (GPT-4/4o), LangChain, LangGraph, and Pinecone for RAG-based reasoning, job retrieval, and AI confidence scoring. Designed and implemented real-time AI chat over WebSockets with a React/Vite frontend, Firebase Auth, and a PostgreSQL-backed journey engine to handle onboarding, questionnaires, progress tracking, and personalized recommendations. Integrated Whisper-based speech-to-text and TTS so users can talk to the coach via voice, creating a low-latency, production-ready experience deployed on Vercel (frontend) and Render (backend).</p>
           <div>
-            <span class="tag">FastAPI</span><span class="tag">LangChain</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">Pinecone</span>
+            <span class="tag">GenAI</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Pinecone</span>
           </div>
           <p><a href="#" target="_blank" rel="noopener">Live</a></p>
         </article>
 
         <article class="project" data-category="cv">
+          <img src="assets/projects/deep-image-prior.gif" alt="Deep Image Prior Demo" loading="lazy">
           <h3>Deep Image Prior For Image Restoration</h3>
           <p>Eliminated the necessity of large training datasets for image restoration systems by utilizing Deep Image Prior (DIP) to perform denoising, text inpainting, hole filling, and image reconstruction tasks. Implemented optimization-based training of convolutional neural networks (CNNs) on single corrupted images, overcoming real-world issues such as scarcity of clean ground truth data. Achieved a SSIM score of 0.939, showing strong high-quality restoration performance which is critical to domains such as medical imaging, satellite restoration, or historical document repair.</p>
           <div>
-            <span class="tag">PyTorch</span><span class="tag">Computer Vision</span><span class="tag">Image Restoration</span>
+            <span class="tag">Computer Vision</span><span class="tag">PyTorch</span><span class="tag">Deep Learning</span><span class="tag">CNNs</span><span class="tag">Image Restoration</span>
           </div>
           <p><a href="https://github.com/TusharGwal/Image-Restoration-using-Deep-Image-Prior" target="_blank" rel="noopener">Repo / Paper</a></p>
         </article>
 
-        <article class="project" data-category="genai">
-          <h3>Discord RAG Chatbot</h3>
-          <p>Built a Retrieval-Augmented Generation (RAG) chatbot for Discord to enable context-aware, memory-based conversations using OpenAI’s GPT API and LangChain pipelines. Deployed a production ready ML inference service with a FastAPI backend, MongoDB vector store, Redis caching, and Docker Compose for scalable, low latency real time query retrieval and response generation.</p>
-          <div>
-            <span class="tag">FastAPI</span><span class="tag">LangChain</span><span class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">Docker</span>
-          </div>
-          <p><a href="#" target="_blank" rel="noopener">Code</a></p>
-        </article>
-
         <article class="project" data-category="ml">
+          <img src="assets/projects/ml-az.png" alt="Machine Learning A-Z Demo" loading="lazy">
           <h3>Machine Learning A-Z: Hands-On Python & Data Science</h3>
           <p>Hands-on implementation of core and advanced machine learning concepts including regression, classification, clustering, association rules, reinforcement learning (UCB, Thompson Sampling, Q-learning), NLP pipelines, ANN/CNN architectures, PCA/LDA, and boosting techniques (XGBoost, CatBoost). Includes complete Python code, handwritten notes, and real-world dataset experiments.</p>
           <div>
-            <span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">NLP</span>
+            <span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">NLP</span><span class="tag">Reinforcement Learning</span><span class="tag">Python</span>
           </div>
           <p><a href="https://github.com/TusharGwal/Machine-Learning-A-Z-Hands-On-Projects-in-Python-for-Data-Science-2025" target="_blank" rel="noopener">Code</a></p>
         </article>
 
         <article class="project" data-category="cv">
+          <img src="assets/projects/cv-course.gif" alt="Computer Vision Course Demo" loading="lazy">
           <h3>CS512 – Computer Vision</h3>
-          <p>Hands on implementation of core Computer Vision concepts including matrix operations, geometric transformations, filtering, edge detection, robust estimation, and deep learning models (CNNs, VGG/ResNet, U-Net, YOLOv3, ViT). Built and trained models on real datasets like CIFAR-10 and Oxford-IIIT Pet using Python, OpenCV, and TensorFlow.</p>
+          <p>Practical implementation of core Computer Vision concepts including matrix operations, geometric transformations, filtering, edge detection, robust estimation, and deep learning models (CNNs, VGG/ResNet, U-Net, YOLOv3, ViT). Fine-tuned and trained models on real datasets like CIFAR-10 and Oxford-IIIT Pet using Python, OpenCV, and TensorFlow.</p>
           <div>
-            <span class="tag">Computer Vision</span><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">TensorFlow</span>
+            <span class="tag">Computer Vision</span><span class="tag">Deep Learning</span><span class="tag">OpenCV</span><span class="tag">TensorFlow</span><span class="tag">YOLO</span><span class="tag">Transformers</span>
           </div>
           <p><a href="https://github.com/TusharGwal/Computer-Vision" target="_blank" rel="noopener">Code</a></p>
-        </article>
-
-        <article class="project" data-category="ml">
-          <h3>Sentiment Analysis for Movie Reviews (Naive Bayes)</h3>
-          <p>Designed and implemented a custom sentiment analysis model from scratch using the Naive Bayes algorithm to classify movie reviews as positive or negative. Built the entire pipeline without relying on external libraries or pre-built modules, demonstrating strong understanding of text preprocessing and probabilistic modeling. Achieved 85.99% accuracy, suitable for lightweight NLP applications like customer feedback analysis and review aggregation.</p>
-          <div>
-            <span class="tag">Naive Bayes</span><span class="tag">NLP</span><span class="tag">Python</span>
-          </div>
-          <p><a href="https://github.com/TusharGwal/SENTIMENT-ANALYSIS-FOR-MOVIE-REVIEW-USING-NAIVE-BAYES" target="_blank" rel="noopener">Code</a></p>
         </article>
       </div>
     </section>
@@ -520,10 +507,10 @@ Currently working as an AI Engineer Intern at Product Manager Accelerator and as
 
     // Typing Effect
 const roles = [
+
   "AI Engineer",
   "Machine Learning Engineer",
-  "Computer Vision Researcher",
-  "Backend Software Engineer"
+  "Computer Vision Researcher"
 ];
     let roleIndex = 0;
     let charIndex = 0;
